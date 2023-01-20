@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -15,7 +11,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +20,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #d9d9d9;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +31,253 @@
     transform: rotate(360deg);
   }
 }
+
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.edit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 650px;
+  padding: 40px 40px;
+}
+
+.card-container.card1 {
+  max-width: 650px;
+  padding: 40px 40px;
+  
+}
+
+.card-container1.card1 {
+  max-width: 650px;
+  padding: 40px 40px;
+  text-align: center;
+}
+
+h3{
+  margin: 0px 0 0;
+  text-align: center;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card1{
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.Wrapper {
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.header{
+  background-color: #ffffff 0.8;
+  height: 80px;
+  border-bottom: #c4c4c4 1px solid;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pageForAll{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.logoHeader:hover {
+  cursor: pointer;
+}
+
+.nav-link-logo {
+  padding: 0;
+}
+
+#menu {
+  margin-left: 10px;
+}
+
+.navbar-custom{
+  width: 1140px;
+  margin: auto;
+}
+
+.navbar-brand, .nav-link{
+  border-bottom: 2px solid transparent;
+  color: #000000;
+  font-weight: 500;
+}
+
+
+.elementor-7 .elementor-element.elementor-element-09fb83e:not(.elementor-motion-effects-element-type-background), .elementor-7 .elementor-element.elementor-element-09fb83e > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-image: url(https://ld-wp73.template-help.com/wordpress/prod_20924/v1/wp-content/uploads/2018/11/slide-1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  align-items: center;
+}
+
+.elementor-7 .elementor-element.elementor-element-09fb83e {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px 0px 260px 0px;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.elementor .elementor-background-overlay, .elementor .elementor-background-slideshow {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.elementor-7 .elementor-element.elementor-element-a2ac41f .elementor-heading-title {
+  font-size: 32px;
+  color: white;
+}
+
+.nav-link:hover {
+  color: #4d4d4d;
+  border-bottom: 2px solid #94CA0B;
+}
+
+.nav-link img {
+  margin-right: 5px;
+}
+
+.dropdownImg {
+  margin-left: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.footerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+}
+
+.footerBottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerMenu {
+  display: flex;
+  align-items: center;
+}
+
+.footerMenu li{
+  list-style-type: none;
+}
+
+.socialMedia img{
+  margin-left: 15px;
+}
+
+
+.custom-control-label {
+  font-weight: 400;
+}
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+.forgot-password a {
+  color: #167bff;
+}
+
+
+

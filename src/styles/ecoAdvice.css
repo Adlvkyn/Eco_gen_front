@@ -1,0 +1,117 @@
+.joinUs {
+    height: 570px;
+    background-image: url("/public/img/ecoAdvice/backEcoAdvice.png");
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.joinContent {
+   
+    font-weight: 500;
+    width: max-content;
+    margin-inline: auto;
+    color: white;
+}
+
+.joinBtn {
+    padding-top: 5px;
+    padding-inline: 15px;
+    font-size: 30px;
+    background-color: #94CA0B;
+    border-radius: 30px;
+}
+
+.joinText span {
+    font-size: 35px;
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.joinText {
+    padding-top: 200px;
+    justify-items: center;
+}
+
+fieldset {
+    margin-block: 20px;
+    border: 10px solid #94CA0B;
+    padding: 10px;
+}
+
+fieldset *{
+    display: block;
+    margin: auto;
+}
+
+legend {
+    width:auto;
+    padding: 10px;
+}
+
+.span2 {
+    width: fit-content;
+}
+
+legend span {
+    margin-inline: auto;
+}
+
+.ecoAdvice {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.top {
+    color: #94CA0B;
+    display: flex;
+    align-items:center;
+}
+
+.top span{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.top hr {
+    margin: 0;
+    margin-left: 30px;
+    height: 1px;
+    width: 71%;
+    background-color: #94CA0B;
+}
+
+.cardContent {
+    margin-top: 25px;
+    display: flex;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+}
+
+.textCard {
+    padding: 10px;
+}
+
+.textCard1 {
+    font-size: 30px;
+    color: #94CA0B;
+    font-weight: 500;
+    display: block;
+}
+
+.textCard2 {
+    font-size: 20px;
+    color: grey;
+    font-weight: 500;
+    display: block;
+}
+
+.textCard3 {
+    font-size: 20px;
+    color: grey;
+    font-weight: 400;
+    display: block;
+    margin-top: 15px;
+}
