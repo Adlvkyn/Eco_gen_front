@@ -8,7 +8,7 @@ import AuthService from "../services/auth.service";
 import { withRouter } from '../common/with-router';
 
 const required = value => {
-  if (value.length>17 || value.length<11) {
+  if (value.length>6 || value.length<6) {
     return (
       <div className="alert alert-danger" role="alert">
        Вы должны ввести 6 цифр
@@ -280,7 +280,7 @@ class ForgotPassword extends Component {
           <div className="col-md-12">
           <div className="card1 card-container">
             <h4>Код подтверждения</h4>
-            <h6>Введите код подтверждения. Запишите каждую цифру через пробел. Например: 1 2 3 4 5 6</h6>
+            <h6>Введите код подтверждения.Например: 123456</h6>
             <Form
                onSubmit={this.handleNumbers}
               ref={c => {

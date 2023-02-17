@@ -1,6 +1,5 @@
 import http from "../http-common";
 import axios from "axios";
-import fileDownload from 'js-file-download';
 
 const API_URL_CHECK = "http://localhost:8080/api/";
 class PlaceDataService {
@@ -47,19 +46,19 @@ class PlaceDataService {
     return axios({
       url: API_URL_CHECK + "download",
       method: 'GET',
-      responseType: 'blob', // important
+      responseType: 'blob', 
     }).then((response) => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'file.xlsx');
+      link.setAttribute('download', 'Отчет_приема.xlsx');
       document.body.appendChild(link);
       link.click();
     });
   }
 
   getAllNews() {
-    return http.get('/news/getAllNews');
+    return axios.get('/news/getAllNews');
   }
 }
 
