@@ -137,13 +137,11 @@ export default class Accrual extends Component {
                             <div class="searchSubmit" type="button" onClick={this.retrievePlaces}><img width={25} height={25} src="img/search.png" /></div>
                         </div>
                     </div>
-                    {/* <div className="actions"> */}
+                   
                         <button onClick={this.download}>
                             Вывести excel
                         </button>
-                       {/* <Link href={this.download} target="_blank" download>Вывести excel</Link> */}
-                       {/* <Link to="/your_file.txt" target="_blank" download>Download</Link> */}
-                    {/* </div> */}
+                      
                     
 
                 </div>

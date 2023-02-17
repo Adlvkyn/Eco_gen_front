@@ -46,7 +46,7 @@ class PlaceDataService {
     return axios({
       url: API_URL_CHECK + "download",
       method: 'GET',
-      responseType: 'blob', // important
+      responseType: 'blob', 
     }).then((response) => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
@@ -58,7 +58,7 @@ class PlaceDataService {
   }
 
   getAllNews() {
-    return http.get('/news/getAllNews');
+    return axios.get('/news/getAllNews');
   }
 }
 
