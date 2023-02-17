@@ -45,7 +45,7 @@ export default class Home extends Component {
           </div>
           <div className="aboutUs" >
             <h2 id='about'>О нас</h2>
-            <p > Eco-generation это платформа разработанная для понятного процесса сдачи на переработку. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur velit sit amet faucibus tincidunt. Praesent gravida rutrum est, vitae mollis ligula vestibulum ac. Ut eu dui fringilla, pharetra mi at, facilisis dolor. Pellentesque quam lacus, maximus a elementum rutrum, scelerisque vel mi. Praesent luctus ligula elit, sed</p>
+            <p> Eco-generation это платформа разработанная для понятного процесса сдачи на переработку. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur velit sit amet faucibus tincidunt. Praesent gravida rutrum est, vitae mollis ligula vestibulum ac. Ut eu dui fringilla, pharetra mi at, facilisis dolor. Pellentesque quam lacus, maximus a elementum rutrum, scelerisque vel mi. Praesent luctus ligula elit, sed</p>
           </div>
           <div className="solution">  
             <div className="solutionImg">

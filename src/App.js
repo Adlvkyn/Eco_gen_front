@@ -187,8 +187,7 @@ class App extends Component {
                         <Route path="/accrual" element={<Accrual />} />
                         <Route path="/news" element={<News />} />
                         <Route path="/forgot" element={<Forgot />} />
-                        {/* <Route path="/checkNumbers" element={<Check />} />
-                        <Route path="/map" element={<Map />} /> */}
+
                         <Route path="/QR" element={<QR />} />
                     </Routes>
                 </div>

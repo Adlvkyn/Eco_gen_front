@@ -34,6 +34,12 @@ export default class AddPlace extends Component {
     });
   }
 
+  onChangeDistrict(e) {
+    this.setState({
+      district: e.target.value
+    });
+  }
+
   savePlace() {
     var data = {
       name: this.state.name,
