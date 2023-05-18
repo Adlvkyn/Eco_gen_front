@@ -138,7 +138,7 @@ export default class Accrual extends Component {
                         </div>
                     </div>
                    
-                        <button onClick={this.download}>
+                        <button class ="btn btn-success " onClick={this.download}>
                             Вывести excel
                         </button>
                       
@@ -150,12 +150,12 @@ export default class Accrual extends Component {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>wastepaper</th>
-                                <th>glass</th>
-                                <th>plastic</th>
-                                <th>tin</th>
-                                <th>points</th>
-                                <th>date</th>
+                                <th>Макулатура</th>
+                                <th>Стекло</th>
+                                <th>Пластик</th>
+                                <th>Железо</th>
+                                <th>Баллы</th>
+                                <th>Дата</th>
                                 <th>userID</th>
                                 <th>adminID</th>
                                 <th>username</th>

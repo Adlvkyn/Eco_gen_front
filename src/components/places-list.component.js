@@ -8,6 +8,7 @@ import '../styles/places-list.css';
 
 
 export default class PlacesList extends Component {
+    
     constructor(props) {
         super(props);
         this.onChangeSearchName = this.onChangeSearchName.bind(this);
@@ -26,13 +27,14 @@ export default class PlacesList extends Component {
             currentIndex: -1,
             district: "",
             searchName: "",
-
+            selectedDistrict:"Алатауский",
             page: 1,
             count: 0,
             pageSize: 3,
         };
         this.pageSizes = [3, 6, 9];
     }
+    
     
     componentDidMount() {
         this.retrievePlaces();
@@ -74,11 +76,11 @@ export default class PlacesList extends Component {
 
   
 
-    getRequestParams1(district, page, pageSize) {
+    getRequestParams1(selectedDistrict, page, pageSize) {
         let params = {};
 
-        if (district) {
-            params["district"] = district;
+        if (selectedDistrict) {
+            params["selectedDistrict"] = selectedDistrict;
         }
 
         if (page) {
@@ -113,8 +115,8 @@ export default class PlacesList extends Component {
 
     retrievePlaces1() {
 
-        const { district, page, pageSize } = this.state;
-        const params = this.getRequestParams1(district, page, pageSize);
+        const { selectedDistrict, page, pageSize } = this.state;
+        const params = this.getRequestParams1(selectedDistrict, page, pageSize);
 
         PlaceDataService.getAllPage1(params)
             .then((response) => {
@@ -205,15 +207,15 @@ export default class PlacesList extends Component {
                             <div class="searchSubmit" type="button" onClick={this.retrievePlaces}><img width={25} height={25} src="img/search.png" /></div>
                         </div>
                         <div class="regions input-group">
-                            <select class="custom-select" id="inputGroupSelect04">
-                                <option value="ALATAU">Алатауский</option>
-                                <option value="ALMALY">Алмалиский</option>
-                                <option value="AUEZOV">Ауэзовский</option>
-                                <option value="BOSTANDYK">Бостандыкский</option>
-                                <option value="ZHETYSU">Жетысуйский</option>
-                                <option value="MEDEU">Медеуский</option>
-                                <option value="NAURYZBAY">Наурызбауский</option>
-                                <option value="TURKSIB">Турксибский</option>
+                            <select class="custom-select" value={this.selectedDistrict} onChange={e => this.setState({selectedDistrict: e.target.value})} id="inputGroupSelect04">
+                                <option value="Алатауский">Алатауский</option>
+                                <option value="Алмалиский">Алмалиский</option>
+                                <option value="Ауэзовский">Ауэзовский</option>
+                                <option value="Бостандыкский">Бостандыкский</option>
+                                <option value="Жетысуйский">Жетысуйский</option>
+                                <option value="Медеуский">Медеуский</option>
+                                <option value="Наурызбауский">Наурызбауский</option>
+                                <option value="Турксибский">Турксибский</option>
                             </select>
                             <div class="input-group-append">
                                 <button class="btn btn-outline-success" type="button" onClick={this.retrievePlaces1}>Button</button>
@@ -236,7 +238,7 @@ export default class PlacesList extends Component {
                                 <th>ID</th>
                                 <th>Название компании</th>
                                 <th>Адрес</th>
-                                <th>Работает ли</th>
+                                <th>Время работы</th>
                                 <th>Район</th>
                                 <th>Действие</th>
                             </tr>
@@ -247,7 +249,7 @@ export default class PlacesList extends Component {
                                     <th>{place.id}</th>
                                     <th>{place.name}</th>
                                     <th>{place.address}</th>
-                                    <th>{place.status}</th>
+                                    <th>{place.worked}</th>
                                     <th>{place.district}</th>
                                     <th><Link to={"/places/" + place.id}  className="btn btn-success btn-block">Изменить</Link>
                                     

@@ -7,6 +7,7 @@ class Place extends Component {
     super(props);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeAddress = this.onChangeAddress.bind(this);
+    this.onChangeStatus = this.onChangeStatus.bind(this);
     this.getPlace = this.getPlace.bind(this);
     this.updatePlace = this.updatePlace.bind(this);
     this.deletePlace = this.deletePlace.bind(this);
@@ -16,7 +17,7 @@ class Place extends Component {
         id: null,
         name: "",
         address: "",
-        worked: false
+        worked: ""
       },
       message: ""
     };
@@ -50,6 +51,17 @@ class Place extends Component {
     }));
   }
 
+  onChangeStatus(e) {
+    const status = e.target.value;
+    
+    this.setState(prevState => ({
+      currentPlace: {
+        ...prevState.currentPlace,
+        status: status
+      }
+    }));
+  }
+
   getPlace(id) {
     PlaceDataService.get(id)
       .then(response => {
@@ -68,7 +80,7 @@ class Place extends Component {
       id: this.state.currentPlace.id,
       name: this.state.currentPlace.name,
       address: this.state.currentPlace.address,
-      worked: status
+      worked: this.state.currentPlace.status
     };
 
     PlaceDataService.update(this.state.currentPlace.id, data)
@@ -144,10 +156,14 @@ class Place extends Component {
               </div>
 
               <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
-                {currentPlace.worked ? "Worked" : "Pending"}
+              <label htmlFor="status">Status</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="status"
+                  value={currentPlace.status}
+                  onChange={this.onChangeStatus}
+                />
               </div>
             </form>
 

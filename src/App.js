@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import {Link as Link2} from 'react-scroll';
+import { Link as Link2 } from 'react-scroll';
 import AuthService from "./services/auth.service";
 import AddPlaces from "./components/add-place.component";
 import Place from "./components/place.component";
@@ -94,10 +94,20 @@ class App extends Component {
                             </li>
 
                             <li className="nav-item">
-                       
-                                <Link2 to="about" spy={true} smooth="true" className="nav-link">
+
+                                {/* <Link2 to="about" spy={true} smooth="true" className="nav-link">
                                     <span>О нас</span>
-                                </Link2>
+                                </Link2> */}
+                                {/* <Link to={"/home#about"} className="nav-link">
+                                    <span>О нас</span>
+                                </Link> */}
+                                <Link to={"/home#about"} className="nav-link" onClick={() => {
+                                   // window.href('/home');
+                                    const element = document.getElementById("about");
+                                    element.scrollIntoView({ behavior: "smooth" });
+                                }}>
+                                    <span>О нас</span>
+                                </Link>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -109,7 +119,7 @@ class App extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link to={"/home"} className="nav-link">
+                                <Link to={"/map"} className="nav-link">
                                     <span>Карта</span>
                                 </Link>
                             </li>
@@ -187,7 +197,7 @@ class App extends Component {
                         <Route path="/accrual" element={<Accrual />} />
                         <Route path="/news" element={<News />} />
                         <Route path="/forgot" element={<Forgot />} />
-
+                        <Route path="/map" element={<Map />} />
                         <Route path="/QR" element={<QR />} />
                     </Routes>
                 </div>
@@ -244,17 +254,17 @@ class App extends Component {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/home"} className="nav-link">
+                                    <Link to={"/news"} className="nav-link">
                                         Новости
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/home"} className="nav-link">
+                                    <Link to={"/ecoAdvice"} className="nav-link">
                                         Эко советы
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/home"} className="nav-link">
+                                    <Link to={"/home#about"} className="nav-link">
                                         О нас
                                     </Link>
                                 </li>

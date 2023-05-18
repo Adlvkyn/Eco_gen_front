@@ -35,8 +35,8 @@ export default class Home extends Component {
       <div className="home">
         <div className="container">
           <div className="join">
-            <p>Сделай свою жизнь</p>
-            <p>экологичней уже сейчас!</p>
+            <h2>Сделай свою жизнь</h2>
+            <h2>экологичней уже сейчас!</h2>
             <div className="button">
               <a href="/register">
                 Присоединиться
@@ -44,8 +44,13 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="aboutUs" >
-            <h2 id='about'>О нас</h2>
-            <p> Eco-generation это платформа разработанная для понятного процесса сдачи на переработку. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur velit sit amet faucibus tincidunt. Praesent gravida rutrum est, vitae mollis ligula vestibulum ac. Ut eu dui fringilla, pharetra mi at, facilisis dolor. Pellentesque quam lacus, maximus a elementum rutrum, scelerisque vel mi. Praesent luctus ligula elit, sed</p>
+            <h2 id="about">О нас</h2>
+            <p > Eco-generation это платформа разработанная для понятного процесса сдачи на переработку. Мы верим, что каждый человек может сделать свой вклад в защиту окружающей среды и уменьшить негативное влияние нашей деятельности на планету. Присоединяйтесь к нашему сообществу и вместе мы сможем сделать мир чище и здоровее для нас и наших будущих поколений.</p>
+            <div style={{ display: 'flex' }}>
+            <img  src="img/AppStore2.jpg" alt="" style={{height:200 }}></img>
+          <img src="img/QR.png" alt="" style={{height:200,paddingLeft:20}}></img>
+            </div>
+            
           </div>
           <div className="solution">  
             <div className="solutionImg">
@@ -64,6 +69,10 @@ export default class Home extends Component {
               <div><img src="img/upup.png" alt="" /></div>
               <p>Отслеживайте свой прогресс</p>
             </div> 
+          </div>
+          <div className="partners">
+          <h2 >Наши партнеры</h2>
+          <img src="img/partners1.png" alt="" style={{width:1000 }}></img>
           </div>
         </div>
       </div>
