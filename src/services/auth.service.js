@@ -69,7 +69,7 @@ class AuthService {
       glass : glass,
       plastic : plastic,
       tin : tin,
-      current_id_admin:currentUser
+      currentIdAdmin:currentUser
     },
     responseType:'arraybuffer'
      

@@ -1,5 +1,5 @@
 .home {
-    background-image: url("/public/img/Main.png");
+    background-image: url("/public/img/Main-var2.png");
     min-height: 100%;
     max-width: 100%;
     background-repeat: no-repeat;
@@ -8,9 +8,15 @@
 }
 
 .join{
-    padding-top: 250px;
+    padding-top: 200px;
     width: fit-content;
     text-align: center;
+}
+
+.partners{
+    padding-top: 70px;
+    text-align: center;
+    justify-content: center;
 }
 
 .join p {
@@ -20,12 +26,13 @@
 
 .button{
     background-color: #94CA0B;
-    font-size: 32px;
+    font-size: 26px;
     padding-block: 5px;
     padding-inline: 15px;
     border-radius: 30px;
     width: fit-content;
     margin-inline: auto;
+    padding-top: 0px;
 }
 
 .button a{
@@ -39,7 +46,7 @@
 }
 
 .aboutUs{
-    padding-top: 470px;
+    padding-top: 250px;
     font-size: 24px;
     text-align: center;
     color: #000000;
@@ -53,7 +60,7 @@
 .solution {
     border-top: 1px solid rgb(215, 215, 215);
     padding-top: 35px;
-    margin-top: 250px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
