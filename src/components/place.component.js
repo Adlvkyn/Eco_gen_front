@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PlaceDataService from "../services/crud.service";
 import { withRouter } from '../common/with-router';
+import '../styles/placeEdit.css';
 
 class Place extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Place extends Component {
   onChangeName(e) {
     const name = e.target.value;
 
-    this.setState(function(prevState) {
+    this.setState(function (prevState) {
       return {
         currentPlace: {
           ...prevState.currentPlace,
@@ -42,7 +43,7 @@ class Place extends Component {
 
   onChangeAddress(e) {
     const address = e.target.value;
-    
+
     this.setState(prevState => ({
       currentPlace: {
         ...prevState.currentPlace,
@@ -53,7 +54,7 @@ class Place extends Component {
 
   onChangeStatus(e) {
     const status = e.target.value;
-    
+
     this.setState(prevState => ({
       currentPlace: {
         ...prevState.currentPlace,
@@ -114,7 +115,7 @@ class Place extends Component {
       });
   }
 
-  deletePlace() {    
+  deletePlace() {
     PlaceDataService.delete(this.state.currentPlace.id)
       .then(response => {
         console.log(response.data);
@@ -129,13 +130,13 @@ class Place extends Component {
     const { currentPlace } = this.state;
 
     return (
-      <div>
+      <div className="content">
         {currentPlace ? (
           <div className="edit-form">
-            <h4>Place</h4>
+            <h4>Пункты</h4>
             <form>
               <div className="form-group">
-                <label htmlFor="title">Name</label>
+                <label htmlFor="title">Название</label>
                 <input
                   type="text"
                   className="form-control"
@@ -145,7 +146,7 @@ class Place extends Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address">Адрес</label>
                 <input
                   type="text"
                   className="form-control"
@@ -156,7 +157,48 @@ class Place extends Component {
               </div>
 
               <div className="form-group">
-              <label htmlFor="status">Status</label>
+                <label htmlFor="status">Время работы</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="status"
+                  value={currentPlace.status}
+                  onChange={this.onChangeStatus}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="status">Район</label>
+                <div id="region" class="regions input-group">
+                  <select class="custom-select" value={this.selectedDistrict} onChange={e => this.setState({ selectedDistrict: e.target.value })} id="inputGroupSelect04">
+                    <option value="Алатауский">Алатауский</option>
+                    <option value="Алмалиский">Алмалиский</option>
+                    <option value="Ауэзовский">Ауэзовский</option>
+                    <option value="Бостандыкский">Бостандыкский</option>
+                    <option value="Жетысуйский">Жетысуйский</option>
+                    <option value="Медеуский">Медеуский</option>
+                    <option value="Наурызбауский">Наурызбауский</option>
+                    <option value="Турксибский">Турксибский</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button" onClick={this.retrievePlaces1}>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="status">Широта</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="status"
+                  value={currentPlace.status}
+                  onChange={this.onChangeStatus}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="status">Долгота</label>
                 <input
                   type="text"
                   className="form-control"
@@ -169,33 +211,33 @@ class Place extends Component {
 
             {currentPlace.worked ? (
               <button
-                className="badge badge-primary mr-2"
+                className="btn btn-primary mr-2"
                 onClick={() => this.updateWorked(false)}
               >
-                Dont worked
+                Закрыто
               </button>
             ) : (
               <button
-                className="badge badge-primary mr-2"
+                className="btn btn-primary mr-2"
                 onClick={() => this.updateWorked(true)}
               >
-                Worked
+                Открыто
               </button>
             )}
 
             <button
-              className="badge badge-danger mr-2"
+              className="btn btn-danger mr-2"
               onClick={this.deletePlace}
             >
-              Delete
+              Удалить
             </button>
 
             <button
               type="submit"
-              className="badge badge-success"
+              className="btn btn-success"
               onClick={this.updatePlace}
             >
-              Update
+              Обновить
             </button>
             <p>{this.state.message}</p>
           </div>

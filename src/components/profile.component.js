@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Navigate } from "react-router-dom";
 import AuthService from "../services/auth.service";
 import '../styles/profile.css';
+import { Link } from "react-router-dom";
 
 export default class Profile extends Component {
   constructor(props) {
@@ -65,11 +66,7 @@ export default class Profile extends Component {
                     <div className="Stats">
                       <div className="bonus">
                         <img width={35} height={35} src="img/bonus.png" alt="bonusIcon" />
-                        <p>Бонус: 300000000000 тг</p>
-                      </div>
-                      <div className="pointss">
-                        <img width={35} height={35} src="img/points.png" alt="pointsIcon" />
-                        <p>Очки: 276</p>
+                        <p>Бонус: 3000 тг</p>
                       </div>
                       <div className="ratingg">
                         <img width={35} height={35} src="img/ranking.png" alt="rankingIcon" />
@@ -79,7 +76,9 @@ export default class Profile extends Component {
                   </div>
                 </div>
                 <div className="editProfile">
-                  <span>Редактировать профиль</span>
+                  <a style={{textDecoration: 'none'}} href={"/profileEdit"} className="ProfileEdit">
+                    <span>Редактировать профиль</span>
+                  </a>
                 </div>
               </div>
 
@@ -121,7 +120,7 @@ export default class Profile extends Component {
                 <div className="your-rating">
                   <h2>Ваш рейтинг</h2>
                   <div className="user">
-                    <div className="place">{users.length}</div>
+                    <div className="place">46</div>
                     <img src="img/nurgissaImg.jpg" alt="Ваш пользователь" className="user-image" />
                     <div className="username">Adlvkn</div>
                     <div className="score">276 очков</div>
