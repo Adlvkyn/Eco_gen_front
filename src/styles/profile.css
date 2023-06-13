@@ -1,24 +1,83 @@
+.ProfileEdit {
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+
+div, p, span {
+    padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
 .content {
+    padding: 0px;
+	margin: 0px;
     padding-top: 30px;
+    padding-inline: 30px;
+}
+
+.info{
+    margin-left: 15px;
+    justify-content: space-between;
+    display: inline-block;
     display: flex;
-    border: 1px solid #7b7b7b
+}
+
+.infoo{
+    display: flex;
+}
+
+.infoText{
+    margin-left: 25px;
+}
+
+.firstname, .lastname{
+    font-weight: 600;
+}
+
+.username p{
+    color: grey;
 }
 
 .emailInfo img{
     margin-right: 10px;
 }
 
-.content div {
-    margin-left: 15px;
+.userInfo div{
+    padding: 0px;
+	margin: 0px;
+	border: none;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.Stats{
+    padding: 0px;
+	margin: 0px;
+	border: none;
+    margin-top: 20px;
 }
 
 .editProfile {
-    background-color: #d1d1d1;
+    background-color: #94CA0B;
+    color: white;
     border-radius: 10px;
     padding: 5px;
     height: fit-content;
+    position: relative;
+    float: right;
 }
 
+.pointss, .ratingg , .bonus{
+    margin-bottom: 10px;
+}
+
+.pointss p, .ratingg p, .bonus p {
+    display: inline;
+    margin-left: 10px;
+}
+  
 .editProfile:hover {
     cursor: pointer;
     opacity: 0.8;
@@ -28,3 +87,125 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+.recycleStats{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:15px;
+}
+
+.statsName{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.recycleAmount{
+    display: flex;
+}
+
+.recycleAmount div p{
+    text-align: center;
+}
+
+.materialName{
+    font-size: 18px;
+}
+
+.recycleAmount div img{
+    margin-bottom: 10px;
+}
+
+.recycleStats div{
+    margin-right: 40px;
+    align-items: center;
+}
+
+.rating {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #94CA0B;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #94CA0B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+    flex-grow: 1;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .score {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .your-rating {
+    margin-top: 40px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .your-rating h2 {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 20px;
+  }
+  
+  .your-rating .user {
+    background-color: #f9f9f9;
+    box-shadow: none;
+  }
+  
+  .your-rating .user-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .your-rating .username {
+    font-size: 18px;
+  }
+  
+  .your-rating .score {
+    font-size: 16px;
+  }
+  

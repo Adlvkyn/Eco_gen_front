@@ -21,6 +21,8 @@ import Forgot from "./components/forgot-password.component";
 import Check from "./components/check-numbers.component.js";
 import Map from "./components/map.component.js";
 import QR from "./components/qr.component.js";
+import Users from "./components/users.component.js";
+import ProfileEdit from "./components/profile-edit.component";
 
 
 // import AuthVerify from "./common/auth-verify";
@@ -138,7 +140,7 @@ class App extends Component {
                                     <div class="dropdown-content">
                                         <Link to={"/QR"} className="nav-link"><span>Сгенерировать QR</span></Link>
                                         <Link to={"/places"} className="nav-link"><span>Пункты приема</span></Link>
-                                        <Link to={"/home"} className="nav-link"><span>Пользователи</span></Link>
+                                        {/* <Link to={"/users"} className="nav-link"><span>Пользователи</span></Link> */}
                                         <Link to={"/accrual"} className="nav-link">Приход</Link>
                                     </div>
                                 </li>
@@ -199,6 +201,8 @@ class App extends Component {
                         <Route path="/forgot" element={<Forgot />} />
                         <Route path="/map" element={<Map />} />
                         <Route path="/QR" element={<QR />} />
+                        <Route path="/profileEdit" element={<ProfileEdit/>} />
+                        <Route path="/users" element={<Users />} />
                     </Routes>
                 </div>
 
